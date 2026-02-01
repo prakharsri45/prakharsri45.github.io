@@ -1,244 +1,327 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name | Personal Page</title>
-  <meta name="description" content="Personal website: research, publications, experience, talks, service." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- CSS moved to /css/style.css -->
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Senior Software Engineer | Distributed Systems | Healthcare Tech | IEEE Author">
+  <meta name="author" content="Prakhar Srivastava">
+
+  <meta name="theme-color" content="#538cc6">
+
+  <!-- CSS (same stack as your sample) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/new.css">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="img/icon-192.png">
+
+  <title>Prakhar Srivastava | Personal Website</title>
 </head>
 
-<body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">Your Name’s Personal Page</div>
+<body id="homepage" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+    <a class="navbar-brand" href="#homepage">Prakhar Srivastava</a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#talks">Talks</a>
-        <a href="#posts">Posts</a>
-        <a href="#service">Service</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#awards">Awards</a>
-      </nav>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fa fa-bars"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#homepage" data-target="#homepage"><span>Home</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications" data-target="#publications"><span>Publications</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience" data-target="#experience"><span>Experience</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#service" data-target="#service"><span>Service</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#posts" data-target="#posts"><span>Posts</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#awards" data-target="#awards"><span>Awards</span></a></li>
+      </ul>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <main class="wrap" id="home">
-    <div class="grid">
+<!-- ABOUT -->
+<section id="about" class="home-section">
+  <div class="container">
+    <div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <div class="col-12 col-md-3">
+        <div id="profile">
+          <div class="portrait" style="background-image: url('img/portrait.jpg');"></div>
 
-      <!-- LEFT: Profile card -->
-      <aside class="card profile">
-        <div class="avatar" title="Replace with your photo">
-          <img src="assets/profile.jpg" alt="Your photo" />
-        </div>
-
-        <div class="name">Your Name</div>
-        <p class="role">Senior Software Engineer</p>
-        <p class="affil">Oracle Health · Millennium Print Services</p>
-        <p class="affil">Seattle, WA, United States</p>
-
-        <div class="icons" aria-label="Links">
-          <a class="icon" href="mailto:your.email@example.com" title="Email" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/>
-            </svg>
-          </a>
-
-          <a class="icon" href="#" title="Google Scholar" aria-label="Google Scholar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 3l9 6-9 6-9-6 9-6z"/><path d="M21 9v6"/><path d="M6 12v6c0 2 3 3 6 3s6-1 6-3v-6"/>
-            </svg>
-          </a>
-
-          <a class="icon" href="#" title="LinkedIn" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4V9h4v2"/>
-              <path d="M2 9h4v12H2z"/><path d="M4 4a2 2 0 110 4 2 2 0 010-4z"/>
-            </svg>
-          </a>
-
-          <a class="icon" href="#" title="GitHub" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.5c0-1 .1-1.4-.5-2 2-.2 4-1 4-4.5 0-1-.3-2-1-2.8.1-.3.4-1.5-.1-2.7 0 0-1-.3-2.8 1a9.7 9.7 0 00-5.1 0c-1.8-1.3-2.8-1-2.8-1-.5 1.2-.2 2.4-.1 2.7C6.3 8 6 9 6 10c0 3.5 2 4.3 4 4.5-.4.4-.6.9-.5 2V22"/>
-            </svg>
-          </a>
-
-          <a class="icon" href="assets/cv.pdf" title="CV" aria-label="CV">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-              <path d="M14 2v6h6"/>
-              <path d="M8 13h8"/><path d="M8 17h8"/><path d="M8 9h2"/>
-            </svg>
-          </a>
-        </div>
-
-        <div class="sidebar-details">
-          <div class="kv">
-            <div class="k">Interests</div>
-            <div class="v">Distributed systems, IoT, healthcare systems, privacy/security, reliability engineering</div>
+          <div class="portrait-title">
+            <h2 itemprop="name">Prakhar Srivastava</h2>
+            <h3 itemprop="jobTitle">Senior Software Engineer</h3>
+            <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+              <span itemprop="name">Oracle Health (Millennium Print Services)</span>
+            </h3>
           </div>
-          <div class="kv">
-            <div class="k">Keywords</div>
-            <div class="v">EHR printing, IPP/CUPS, cloud observability, edge-to-cloud pipelines</div>
-          </div>
+
+          <ul class="network-icon" aria-hidden="true">
+            <!-- Replace these links with yours -->
+            <li><a itemprop="sameAs" href="mailto:your.email@example.com"><i class="fa fa-envelope big-icon"></i></a></li>
+            <li><a itemprop="sameAs" href="https://www.linkedin.com/in/YOUR_HANDLE/" target="_blank" rel="noopener"><i class="fa fa-linkedin big-icon"></i></a></li>
+            <li><a itemprop="sameAs" href="https://github.com/YOUR_HANDLE" target="_blank" rel="noopener"><i class="fa fa-github big-icon"></i></a></li>
+            <li><a itemprop="sameAs" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener"><i class="ai ai-google-scholar big-icon"></i></a></li>
+            <li><a itemprop="sameAs" href="files/cv.pdf" target="_blank" rel="noopener"><i class="ai ai-cv big-icon"></i></a></li>
+          </ul>
         </div>
-      </aside>
+      </div>
 
-      <!-- RIGHT: Main content -->
-      <section>
-        <div class="card pad">
-          <h1>About</h1>
-          <p>
-            I build reliable backend systems for mission-critical healthcare workflows. My work focuses on scalable printing infrastructure,
-            distributed services, and edge-to-cloud integrations for real-time monitoring.
-          </p>
-          <p class="muted">
-            Edit this paragraph to match your exact positioning (industry/research) — keep it 3–5 sentences.
-          </p>
+      <div class="col-12 col-md-9" itemprop="description">
+        <h1 id="about">About</h1>
 
-          <div class="two-col">
-            <div class="card pad card-flat">
-              <h2>Contact</h2>
-              <div class="kv"><div class="k">Email</div><div class="v"><a href="mailto:your.email@example.com">your.email@example.com</a></div></div>
-              <div class="kv"><div class="k">Location</div><div class="v">Seattle, WA, United States</div></div>
-              <div class="kv"><div class="k">CV</div><div class="v"><a href="assets/cv.pdf">Download PDF</a></div></div>
-            </div>
+        <p>
+          I’m a Senior Software Engineer at Oracle Health, working on large-scale printing infrastructure used in
+          mission-critical clinical workflows (Millennium Print Services). My focus is distributed systems,
+          performance and reliability engineering, and production-grade tooling that keeps end-to-end printing
+          stable across multi-node healthcare environments.
+        </p>
 
-            <div class="card pad card-flat">
-              <h2>Education</h2>
-              <div class="kv"><div class="k">M.S.</div><div class="v">Computer Engineering, Stony Brook University</div></div>
-              <div class="kv"><div class="k">B.Tech</div><div class="v">(Your program), (Your university)</div></div>
-            </div>
+        <p>
+          Outside work, I publish and review research in IoT and healthcare sensing. I have 3+ IEEE publications
+          with 190+ citations and continue to contribute to peer review (IEEE IoT Journal).
+        </p>
+
+        <div class="row">
+          <div class="col-sm-5">
+            <h3>Contact</h3>
+            <ul class="ul-contact fa-ul">
+              <li>
+                <i class="fa-li fa fa-envelope fa" aria-hidden="true"></i>
+                <span>your.email@example.com</span>
+              </li>
+              <li>
+                <i class="fa-li fa fa-building fa" aria-hidden="true"></i>
+                <span>Seattle, Washington, United States</span>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <!-- Publications -->
-        <div class="section" id="publications">
-          <h2>Publications</h2>
-          <div class="list">
-
-            <article class="item">
-              <div class="item-title">
-                <a href="#">Ultra–Low–Cost IoT-Based ESP8266 Pulse Oximeter with Cloud-LLM Triage for Real–Time Sleep Apnoea Detection</a>
-                <span class="meta">IEEE · 2025</span>
-              </div>
-              <div class="meta">Authors: Your Name, Co-authors…</div>
-              <div class="badges">
-                <a class="badge" href="#">PDF</a>
-                <a class="badge" href="#">Code</a>
-                <a class="badge" href="#">DOI</a>
-              </div>
-              <p class="muted">One-line summary of the contribution + impact (e.g., sensitivity/specificity, deployment, adoption).</p>
-            </article>
-
-          </div>
-        </div>
-
-        <!-- Experience -->
-        <div class="section" id="experience">
-          <h2>Experience</h2>
-          <div class="timeline list">
-            <div class="t-item">
-              <div class="item">
-                <div class="item-title">
-                  <div>
-                    <div class="title-strong">Senior Software Engineer</div>
-                    <div class="meta">Oracle Health · Millennium Print Services</div>
-                  </div>
-                  <div class="meta">Mar 2025 – Present · Seattle, US</div>
+          <div class="col-sm-7">
+            <h3>Education</h3>
+            <ul class="ul-edu fa-ul">
+              <li>
+                <i class="fa-li fa fa-graduation-cap"></i>
+                <div class="description">
+                  <p class="course">M.S. in Computer Engineering</p>
+                  <p class="institution">Stony Brook University</p>
                 </div>
-                <p class="muted">
-                  Primary contributor for backend printing reliability and scalability: IPP/CUPS workflows, print queue resolution,
-                  regression tests, and operational hardening.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Talks -->
-        <div class="section" id="talks">
-          <h2>Talks</h2>
-          <div class="list">
-            <div class="item">
-              <div class="item-title">
-                <a href="#">Talk Title</a>
-                <span class="meta">Conference / University · 2026</span>
-              </div>
-              <p class="muted">One line about what you presented. Add slides/video links if available.</p>
-              <div class="badges"><a class="badge" href="#">Slides</a><a class="badge" href="#">Video</a></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Posts -->
-        <div class="section" id="posts">
-          <h2>Posts</h2>
-          <div class="list">
-            <div class="item">
-              <div class="item-title">
-                <a href="#">How IoT Is Transforming Medical Healthcare: Data Storage and Delivery Workflows</a>
-                <span class="meta">Medium · 2026</span>
-              </div>
-              <p class="muted">Short description (1 sentence). Link to the full post.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service -->
-        <div class="section" id="service">
-          <h2>Service</h2>
-          <div class="item">
-            <p>I serve as a reviewer / committee member for the following venues:</p>
-            <ul>
-              <li>IEEE Internet of Things Journal (Reviewer)</li>
-              <li>(Add conferences: SIML 2026, SoutheastCon 2026, etc.)</li>
+              </li>
+              <li>
+                <i class="fa-li fa fa-graduation-cap"></i>
+                <div class="description">
+                  <p class="course">B.Tech. in Computer Science</p>
+                  <p class="institution">Add your university here</p>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
 
-        <!-- Teaching -->
-        <div class="section" id="teaching">
-          <h2>Teaching</h2>
-          <div class="list">
-            <div class="item">
-              <div class="item-title">
-                <div class="title-strong">(Optional) Guest Lectures / Mentoring</div>
-                <div class="meta">2024–Present</div>
-              </div>
-              <p class="muted">Add any teaching assistantships, workshops, internal trainings, or mentoring.</p>
-            </div>
-          </div>
-        </div>
+        <hr class="hr-light" />
 
-        <!-- Awards -->
-        <div class="section" id="awards">
-          <h2>Awards</h2>
-          <div class="list">
-            <div class="item">
-              <div class="item-title">
-                <div class="title-strong">(Add an award / fellowship)</div>
-                <div class="meta">2025</div>
-              </div>
-              <p class="muted">One sentence: what it recognizes and who issues it.</p>
-            </div>
-          </div>
-        </div>
-
-        <footer>
-          <div>© <span id="y"></span> Your Name · Host on GitHub Pages</div>
-        </footer>
-      </section>
-
+        <p class="text-muted" style="font-size:0.9rem">
+          Tip: Replace the portrait image at <code>img/portrait.jpg</code>, and update social links above.
+        </p>
+      </div>
     </div>
-  </main>
+  </div>
+</section>
 
-  <!-- JS moved to /js/main.js -->
-  <script src="js/main.js"></script>
+<!-- PUBLICATIONS -->
+<section id="publications" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3 section-heading">
+        <h1>Publications</h1>
+      </div>
+      <div class="col-12 col-md-9">
+
+        <div class="pub-list-item" style="margin-bottom: 0.75rem">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <span class="name"><strong>Ultra–Low–Cost IoT-Based ESP8266 Pulse Oximeter with Cloud-LLM Triage for Real–Time Sleep Apnoea Detection</strong></span>
+          <div class="pub-authors">Prakhar Srivastava, et al.</div>
+          <div class="pub-publication"><em>IEEE</em> (2025) · 20-participant evaluation · 92.4% sensitivity / 88.7% specificity</div>
+          <p class="text-muted" style="margin-bottom:0">Add PDF / DOI links here when public.</p>
+        </div>
+
+        <div class="pub-list-item" style="margin-bottom: 0.75rem">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <span class="name"><strong>Additional IEEE Publication #2</strong></span>
+          <div class="pub-authors">Your author list</div>
+          <div class="pub-publication"><em>IEEE Journal/Conference</em> (Year)</div>
+        </div>
+
+        <div class="pub-list-item" style="margin-bottom: 0.75rem">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <span class="name"><strong>Additional IEEE Publication #3</strong></span>
+          <div class="pub-authors">Your author list</div>
+          <div class="pub-publication"><em>IEEE Journal/Conference</em> (Year)</div>
+        </div>
+
+        <h4 style="margin-top: 1.25rem;">In review / accepted</h4>
+        <div class="pub-list-item" style="margin-bottom: 0.75rem">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <span class="name"><strong>Accepted Paper – IEEE SoutheastCon 2026</strong></span>
+          <div class="pub-authors">Your author list</div>
+          <div class="pub-publication"><em>IEEE SoutheastCon</em> (2026)</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-3 section-heading">
+        <h1>Experience</h1>
+      </div>
+
+      <div class="col-12 col-lg-9">
+        <div class="row experience">
+          <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50"><div class="col">&nbsp;</div><div class="col">&nbsp;</div></div>
+            <div class="m-2"><span class="badge badge-pill border exp-fill">&nbsp;</span></div>
+            <div class="row h-50"><div class="col border-right">&nbsp;</div><div class="col">&nbsp;</div></div>
+          </div>
+
+          <div class="col py-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="float-right text-muted exp-meta">
+                  <div>Mar 2025 – Present</div>
+                  <div class="text-right">Seattle, US</div>
+                </div>
+                <h4 class="card-title exp-title text-muted mt-0 mb-1">Senior Software Engineer</h4>
+                <h4 class="card-title exp-company text-muted my-0">Oracle Health · Millennium Print Services</h4>
+                <div class="card-text">
+                  Performance and reliability engineering for clinical print workflows. Work includes print cache services,
+                  external vs local printing guards, automation tests, and production defect resolution.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row experience">
+          <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50"><div class="col border-right">&nbsp;</div><div class="col">&nbsp;</div></div>
+            <div class="m-2"><span class="badge badge-pill border">&nbsp;</span></div>
+            <div class="row h-50"><div class="col">&nbsp;</div><div class="col">&nbsp;</div></div>
+          </div>
+
+          <div class="col py-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="float-right text-muted exp-meta">
+                  <div>Past</div>
+                  <div class="text-right">US</div>
+                </div>
+                <h4 class="card-title exp-title text-muted mt-0 mb-1">Associate Analyst, Client Sales Specialist</h4>
+                <h4 class="card-title exp-company text-muted my-0">Unisys</h4>
+                <div class="card-text">
+                  Early-career role focused on client-facing analytics and technical delivery.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section id="service" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3 section-heading">
+        <h1>Service</h1>
+      </div>
+      <div class="col-12 col-md-9">
+        <p>I contribute to the research community through peer review and professional memberships:</p>
+        <ul>
+          <li>Reviewer, <strong>IEEE Internet of Things Journal</strong> (8+ reviews)</li>
+          <li>IEEE Senior Member</li>
+          <li>Open-source contributions and internal tooling for test automation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTS -->
+<section id="posts" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3 section-heading">
+        <h1>Posts</h1>
+      </div>
+      <div class="col-12 col-md-9">
+        <div class="card-simple">
+          <h3 class="article-title"><a href="#" onclick="return false;">How IoT Is Transforming Medical Healthcare: Data Storage and Delivery Workflows</a></h3>
+          <div class="article-style">
+            <p>A short explainer on end-to-end IoT healthcare data pipelines (collection → storage → real-time delivery).</p>
+          </div>
+          <p class="read-more">
+            <a class="btn btn-outline-primary my-1" href="#" onclick="return false;">ADD LINK</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3 section-heading">
+        <h1>Awards</h1>
+      </div>
+      <div class="col-12 col-md-9">
+        <p><i class="fa fa-trophy" aria-hidden="true"></i> <span>Hackathon Raptors Fellowship</span></p>
+        <p><i class="fa fa-trophy" aria-hidden="true"></i> <span>IEEE Senior Member (approved)</span></p>
+        <p class="text-muted" style="margin-top: 1rem;">Add more awards, recognitions, and speaking invitations here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">
+      &copy; <span id="year"></span> Prakhar Srivastava
+      &middot; Built as a lightweight static site (no build step).
+      <span class="float-right" aria-hidden="true">
+        <a href="#top" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x"></i></span></a>
+      </span>
+    </p>
+  </footer>
+</div>
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<!-- <script src="js/academic.min.eb10806a93af0f9ee71056bc8bc9b5ca.js"></script> -->
+<script src="js/custom.js"></script>
+
 </body>
 </html>
