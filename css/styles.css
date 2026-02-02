@@ -95,6 +95,13 @@ h3.article-title a:hover {
   transition: color 0.6s ease;
 }
 
+a,
+h3.article-media a:hover {
+  color: #538cc6;
+  text-decoration: none;
+  transition: color 0.6s ease;
+}
+
 a:hover,
 a:focus {
   color: #538cc6;
@@ -229,6 +236,11 @@ small,
  *  Home Sections
  **************************************************/
 
+ #about.home-section .col-12.col-md-9 p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 @keyframes intro {
   0% {
     opacity: 0;
@@ -307,7 +319,7 @@ small,
 ul.network-icon {
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap !important;
   justify-content: center;
   list-style: none;
   padding: 0;
@@ -365,7 +377,7 @@ ul.ul-edu li .description p.institution {
 
 .pub-icon {
   color: rgba(0, 0, 0, 0.54);
-  font-size: 0.81em;
+  /* font-size: 0.81em; */
   padding-top: 6px;
 }
 
@@ -437,7 +449,7 @@ ul.ul-edu li .description p.institution {
 .experience .card-text,
 .experience .card-text p {
   color: #000 !important;
-  font-size: 0.75rem !important;
+  font-size: 1rem !important;
 }
 
 .dark .experience .text-muted {
@@ -542,7 +554,24 @@ ul.ul-edu li .description p.institution {
 }
 
 .card-simple p.read-more {
-  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.btn-read-more {
+  padding: 12px 28px;        /* bigger button */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;    /* spaced letters like screenshot */
+  text-transform: uppercase;
+  border-radius: 6px;
+  border-width: 1.5px;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.btn-read-more:hover {
+  background-color: #0d6efd; /* Bootstrap primary */
+  color: #fff;
 }
 
 .dark .card-simple {
@@ -678,14 +707,15 @@ ul.ul-edu li .description p.institution {
  **************************************************/
 
 footer {
-  margin: 4rem 0 0;
-  padding: 2rem 0;
+  margin: 2rem 0 0;
+  padding: 1.5rem 0;
   width: 100%;
 }
 
 footer p {
-  font-size: 0.75rem;
+  font-size: 1rem;
   text-align: center;
+  font-style: italic; 
 }
 
 .site-footer,
@@ -1257,3 +1287,261 @@ ul.toc-top {
   color: #538cc6;
   text-decoration: none;
 }
+
+/*************************************************
+ *  Service
+ **************************************************/
+
+.service {
+  line-height: 1.8;          /* overall spacing */
+}
+
+.service-head {
+  font-size: 1.7rem;
+}
+
+.service-line {
+  display: block;
+  margin-top: 0.3rem;       /* space between lines */
+}
+
+.service-item {
+  font-size: 1.3rem;        /* increase title size */
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+ /*************************************************
+ *  Page content style
+ **************************************************/
+
+article {
+  animation: intro 0.3s both;
+  animation-delay: 0.15s;
+}
+
+.article-container {
+  max-width: 760px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto 0 auto;
+}
+
+.split-header {
+  margin-bottom: 2rem;
+}
+
+.split-header .share-box {
+  float: left;
+}
+
+.page-subtitle {
+  font-size: 1.15rem;
+  color: rgba(0,0,0,.54);
+  margin-bottom: 1rem;
+}
+
+.dark .page-subtitle {
+  color: rgba(255,255,255,0.54);
+}
+
+.split-header .page-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.split-header-content {
+  max-width: 612px;
+  width: 100%;
+  padding: 60px 60px 32px 0;
+  margin-left: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Prevent FA's line height of 1 causing FA button links to be taller than other button links. */
+.btn-links .fab,
+.btn-links .fas {
+  line-height: inherit !important;
+}
+
+.split-header-image {
+  position: relative; /* Required for caption positioning */
+  clear: both;
+  max-width: 580px;
+}
+
+.article-header {
+  position: relative; /* Required for caption positioning */
+  clear: both;
+}
+
+.article-banner {
+  width: 100%;
+  height: auto;
+}
+
+.article-header-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #fff;
+  font-size: .7em;
+  background: #000;
+  text-align: right;
+  z-index: 5;
+  opacity: 0.65;
+  border-radius: 5px 0 0 0;
+}
+@media (min-width: 64em) {
+  .article-header-caption {
+    padding: 5px 10px;
+  }
+}
+
+.article-header-caption a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.article-media {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.article-media a {
+  color: #151515;
+  transition: color 0.6s ease;
+}
+
+.article-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.article-title a {
+  color: #151515;
+  transition: color 0.6s ease;
+}
+
+.text-muted {
+  color: rgba(0,0,0,0.54); /* Override Bootstrap */
+}
+
+.dark .text-muted {
+  color: rgba(255,255,255,0.54);
+}
+
+.article-metadata {
+  margin-bottom: 15px;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: rgba(0,0,0,0.54);
+}
+
+.dark .article-metadata {
+  color: rgba(255,255,255,0.54);
+}
+
+.stream-meta.article-metadata {
+  margin-bottom: 5px;
+}
+
+/* For article page only, not lists. */
+article .article-metadata {
+  margin-bottom: 20px;
+  line-height: 30px; /* Match share bar line height. */
+}
+
+.article-metadata a {
+  color: rgba(0,0,0,.54);
+}
+
+.dark .article-metadata a {
+  color: rgba(255,255,255,0.54);
+}
+
+.article-metadata a:hover {
+  color: #538cc6;
+}
+
+.middot-divider {
+  padding-right: .45em;
+  padding-left: .45em;
+  font-size: 15px;
+}
+
+.middot-divider::after {
+  content: '\00B7';
+}
+
+.article-style img,
+.article-style video {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.article-style td img,
+.article-style td video {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.article-style figure {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.article-style figure img {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.article-widget {
+  padding-top: 1rem;
+}
+
+.article-widget h3 {
+  margin-top: 0;
+}
+
+.hr-light {
+  border-top: 1px solid rgba(0,0,0,.05);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#comments {
+  padding-top: 1rem;
+}
+
+/*************************************************
+ *  Awards
+ **************************************************/
+
+.awards {
+  line-height: 1.8;          /* overall spacing */
+}
+
+.award-line {
+  display: block;
+  margin-top: 0.3rem;       /* space between lines */
+}
+
+.awards-item {
+  font-size: 1.4rem;        /* increase title size */
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd; /* light gray line */
+  margin: 1.5rem 0;
+}
+

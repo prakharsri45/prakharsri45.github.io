@@ -221,7 +221,7 @@ ul.ul-contact li {
 .pub-list-item .pub-authors {
   line-height: normal;
   font-style: normal;
-  font-size: 0.85rem;
+  font-size: 1rem;
   /*color: #3170A5;*/
   color: #000000;
   margin-top: 2px;
@@ -230,7 +230,19 @@ ul.ul-contact li {
 
 .pub-list-item .pub-publication {
   color: #090;
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.pub-list-item .pub-abstract {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #4b4f56;
+}
+
+.pub-list-item .name {
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 1px;
 }
 
 /*************************************************
@@ -243,10 +255,7 @@ ul.ul-contact li {
   /* margin-bottom: 0.5rem; */
 }
 
-.pub-list-item .name {
-  color: #090;
-  font-size: 0.9rem;
-}
+
 
 /*************************************************
  *  Navigation Bar
